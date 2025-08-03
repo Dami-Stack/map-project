@@ -1,0 +1,13 @@
+<div class="map-container">
+  <div id="map"></div>
+  <div class="sidebar">
+    <h3>Selected Marker</h3>
+    <div *ngIf="selectedInfo; else noSelection">
+      <p><strong>{{ selectedInfo.name }}</strong></p>
+      <p>{{ selectedInfo.description }}</p>
+    </div>
+    <ng-template #noSelection>
+      <p>No marker selected</p>
+    </ng-template>
+  </div>
+</div>
