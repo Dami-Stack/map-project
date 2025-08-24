@@ -1,4 +1,15 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-  "outputDirectory": "dist/map-project"
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/browser/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
